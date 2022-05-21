@@ -1,0 +1,117 @@
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header{
+    padding: 10px;
+}
+
+header div{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header div img {
+    width: 140px;
+    height: auto;
+}
+
+header div button{
+    background: transparent;
+    border: 0;
+}
+
+header div button img {
+    width: 30px;
+    height: auto;
+}
+
+header nav{
+   /*  display: none; */
+    background: var(--background);
+    width: 250px;
+    /* os 20px é pra compensar o padding top e bottom de 10px */
+    height: calc(100% - 20px);
+
+    border-radius: 8px;
+    margin: 10px;
+
+    padding: 40px;
+   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+
+    position: fixed;
+    top: 0;
+    left: -350px;
+
+    z-index: 1;
+    opacity: 0;
+
+}
+
+@keyframes entrada {
+    from{
+        opacity: 0;
+    }
+    to {
+        transform: translateX(350px);
+        opacity: 1;
+    }
+}
+
+@keyframes saida {
+    from{
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+}
+
+header nav.active{
+    display: block;
+   
+    animation: entrada 0.5s forwards ;  
+}
+
+
+header nav img{
+    width: 140px;
+    height: auto;
+}
+
+header nav ul{
+    list-style: none;
+    padding: 10px;
+}
+header nav ul p {
+    color: var(--system-background);
+    padding: 10px 0;
+}
+
+header nav li{
+    padding: 10px 15px;
+    color: #d2dae2;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+}
+
+header nav li img{
+    width: 20px;
+    margin-right: 5px;
+}
+section{
+    padding: 10px 30px;
+}
+section.active{
+   
+    margin-left: 250px;
+}
